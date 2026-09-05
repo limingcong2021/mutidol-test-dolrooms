@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>正在进入房间…</title>
+  <script>
+    // GitHub Pages 对不存在的路径会返回 404.html；这里把 /<房间码> 转成 /?r=<房间码>
+    (function () {
+      var m = location.pathname.match(/\/([A-Za-z0-9]{6,10})\/?$/);
+      location.replace('/?r=' + (m ? m[1] : ''));
+    })();
+  </script>
+</head>
+<body>正在进入房间，请稍候…</body>
+</html>
